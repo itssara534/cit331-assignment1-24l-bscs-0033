@@ -36,3 +36,29 @@ form.addEventListener("submit", function (event) {
   form.reset();
   message.textContent = "Thanks, " + registration.name + "! You are registered.";
 });
+// Show each registration. textContent keeps the text as plain text.
+function render() {
+  const items = loadRegistrations();
+  list.innerHTML = "";
+
+  if (items.length === 0) {
+    const empty = document.createElement("li");
+    empty.textContent = "No registrations saved yet.";
+    list.appendChild(empty);
+    return;
+  }
+
+  items.forEach(function (item) {
+    const li = document.createElement("li");
+    li.textContent = item.name + " (" + item.email + "), " + item.event + ", heard via " + item.source;
+    list.appendChild(li);
+  });
+}
+
+clearButton.addEventListener("click", function () {
+  localStorage.removeItem(STORAGE_KEY);
+  message.textContent = "All registrations were cleared.";
+  render();
+});
+
+render();
