@@ -38,5 +38,33 @@
           <input type="tel" id="phone" name="phone">
         </p>
       </fieldset>
+            <fieldset>
+        <legend>Event</legend>
+        <p>
+          <label for="event">Choose an event *</label>
+          <select id="event" name="event" required>
+            <option value="">Choose an event...</option>
+            <option>Golden Hour Walk</option>
+            <option>Phone Photo Workshop</option>
+            <option>Editing Night</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you hear about us? *</legend>
+        <p>
+          <input type="radio" id="src-friend" name="source" value="Friend" required>
+          <label for="src-friend">Friend</label>
+        </p>
+        <p>
+          <input type="radio" id="src-social" name="source" value="Social media">
+          <label for="src-social">Social media</label>
+        </p>
+        <p>
+          <input type="radio" id="src-poster" name="source" value="Poster">
+          <label for="src-poster">Poster on campus</label>
+        </p>
+      </fieldset>
     </form>
   </main>
