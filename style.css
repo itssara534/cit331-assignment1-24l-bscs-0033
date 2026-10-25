@@ -100,3 +100,46 @@ form fieldset {
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--brand-dark);
+}
+
+.brand {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand img {
+  vertical-align: middle;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.nav-list a.active {
+  background: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+}
