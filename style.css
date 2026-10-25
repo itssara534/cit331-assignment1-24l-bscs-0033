@@ -1,0 +1,26 @@
+/* Campus Photo Society: style.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #1f4e5f;
+  --brand-dark: #12313c;
+  --accent: #e0a526;
+  --bg: #f7f7f2;
+  --surface: #ffffff;
+  --text: #1d2a30;
+  --muted: #4f5f66;
+  --border: #d5dcdf;
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
