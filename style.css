@@ -143,3 +143,21 @@ form fieldset {
   color: var(--text);
   font-weight: 700;
 }
+.event-list,
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event-list > li,
+.card-row > li {
+  flex: 1 1 260px;
+}
+
+.card p {
+  margin: 0 0 8px;
+}
