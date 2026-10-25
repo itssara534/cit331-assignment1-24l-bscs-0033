@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/script.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Campus Photo Society: walks, workshops and a place to share your photos.">
@@ -20,4 +21,61 @@
   </header>
     <main id="main">
     <h1>Register for an event</h1>
+        <p>Fields marked * are required.</p>
+
+    <form id="register-form" action="#" method="post">
+      <fieldset>
+        <legend>Your details</legend>
+        <p>
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name">
+        </p>
+        <p>
+          <label for="email">University email *</label>
+          <input type="email" id="email" name="email">
+        </p>
+        <p>
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone">
+        </p>
+      </fieldset>
+            <fieldset>
+        <legend>Event</legend>
+        <p>
+          <label for="event">Choose an event *</label>
+          <select id="event" name="event" required>
+            <option value="">Choose an event...</option>
+            <option>Golden Hour Walk</option>
+            <option>Phone Photo Workshop</option>
+            <option>Editing Night</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>How did you hear about us? *</legend>
+        <p>
+          <input type="radio" id="src-friend" name="source" value="Friend" required>
+          <label for="src-friend">Friend</label>
+        </p>
+        <p>
+          <input type="radio" id="src-social" name="source" value="Social media">
+          <label for="src-social">Social media</label>
+        </p>
+        <p>
+          <input type="radio" id="src-poster" name="source" value="Poster">
+          <label for="src-poster">Poster on campus</label>
+        </p>
+      </fieldset>
+            <button type="submit" class="btn">Register</button>
+      <p id="message" role="status" aria-live="polite"></p>
+    </form>
+
+    <section class="saved">
+      <h2>Saved registrations</h2>
+      <p>These are stored in this browser only.</p>
+      <ul id="saved-list"></ul>
+      <button type="button" id="clear-all" class="btn btn-secondary">Clear all</button>
+    </section>
+    </form>
   </main>
