@@ -8,7 +8,7 @@ Built for CIT331 Assignment 1.
 - events.html--> Upcoming events
 - register.html--> Registration form 
 ## Image sources
-- images/camera.svg: drawn by the author for this site.
+- images/camera.svg
 
 ## Live site
 https://itssara534.github.io/cit331-assignment1-24l-bscs-0033/
