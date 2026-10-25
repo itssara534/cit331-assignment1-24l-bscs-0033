@@ -1,0 +1,271 @@
+/* Campus Photo Society: style.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #1f4e5f;
+  --brand-dark: #12313c;
+  --accent: #e0a526;
+  --bg: #f7f7f2;
+  --surface: #ffffff;
+  --text: #1d2a30;
+  --muted: #4f5f66;
+  --border: #d5dcdf;
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+/* Element and grouping selectors */
+h1, h2, h3 {
+  color: var(--brand-dark);
+  line-height: 1.2;
+}
+h1 { font-size: 2.2rem; margin: 0 0 12px; }
+h2 { font-size: 1.6rem; margin: 0 0 12px; }
+h3 { font-size: 1.2rem; margin: 0 0 8px; }
+
+/* Class selector */
+.card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ID selector */
+#message {
+  min-height: 1.6em;
+  font-weight: 600;
+  color: #0a6b50;
+}
+
+/* Descendant selector */
+main .card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Child selector */
+.card-row > li,
+.event-list > li {
+  flex: 1 1 260px;
+}
+
+/* Attribute selector: external links get an arrow */
+a[href^="https"]::after {
+  content: " \2197";
+  font-size: 0.85em;
+}
+
+/* Pseudo-classes */
+.card:hover {
+  border-color: var(--brand);
+}
+.btn:hover {
+  background: var(--brand-dark);
+  color: #fff;
+}
+.hero {
+  padding: 40px 32px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: var(--radius);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+main > section,
+main > aside,
+main > figure {
+  margin: 0 0 32px;
+}
+
+form fieldset {
+  margin: 0 0 20px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--brand-dark);
+}
+
+.brand {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand img {
+  vertical-align: middle;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.nav-list a.active {
+  background: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+}
+.event-list,
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event-list > li,
+.card-row > li {
+  flex: 1 1 260px;
+}
+
+.card p {
+  margin: 0 0 8px;
+}
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 20px 24px;
+  background: var(--brand-dark);
+  color: #fff;
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+form label {
+  font-weight: 600;
+}
+
+form p {
+  margin: 0 0 12px;
+}
+
+form p > label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #b3261e;
+}
+
+::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+#message {
+  min-height: 1.6em;
+  font-weight: 600;
+  color: #0a6b50;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 24px 20px;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
