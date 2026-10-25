@@ -269,3 +269,44 @@ figcaption {
     align-items: flex-start;
   }
 }
+/* Buttons base style (Task 6 mein missing tha) */
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 24px;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+/* Hero ka text white, taake background par saaf nazar aaye */
+.hero h1,
+.hero p {
+  color: #fff;
+}
+
+/* Radio ke saath label same line par */
+input[type="radio"] + label {
+  display: inline;
+  margin: 0;
+}
+
+/* Focus visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
