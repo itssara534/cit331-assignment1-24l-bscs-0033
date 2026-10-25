@@ -17,3 +17,22 @@ function loadRegistrations() {
 function saveRegistrations(items) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
 }
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // stop the page from reloading
+
+  const data = new FormData(form);
+  const registration = {
+    name: data.get("name").trim(),
+    email: data.get("email"),
+    phone: data.get("phone"),
+    event: data.get("event"),
+    source: data.get("source")
+  };
+
+  const items = loadRegistrations();
+  items.push(registration);
+  saveRegistrations(items);
+
+  form.reset();
+  message.textContent = "Thanks, " + registration.name + "! You are registered.";
+});
